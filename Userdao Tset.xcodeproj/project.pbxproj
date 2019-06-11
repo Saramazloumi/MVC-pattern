@@ -13,6 +13,10 @@
 		3009377622B005D700394C3C /* Userdao_Tset.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3009377422B005D700394C3C /* Userdao_Tset.xcdatamodeld */; };
 		3009377822B005D800394C3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3009377722B005D800394C3C /* Assets.xcassets */; };
 		3009377B22B005D800394C3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3009377922B005D800394C3C /* LaunchScreen.storyboard */; };
+		3009378622B0070B00394C3C /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009378522B0070B00394C3C /* UserDao.swift */; };
+		3009378822B0072200394C3C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3009378722B0072200394C3C /* Login.storyboard */; };
+		3009378A22B00C0000394C3C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009378922B00C0000394C3C /* LoginViewController.swift */; };
+		3009378C22B00E2D00394C3C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009378B22B00E2D00394C3C /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		3009377722B005D800394C3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3009377A22B005D800394C3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3009377C22B005D800394C3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3009378522B0070B00394C3C /* UserDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
+		3009378722B0072200394C3C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3009378922B00C0000394C3C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3009378B22B00E2D00394C3C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		3009376C22B005D700394C3C /* Userdao Tset */ = {
 			isa = PBXGroup;
 			children = (
-				3009376D22B005D700394C3C /* AppDelegate.swift */,
-				3009376F22B005D700394C3C /* ViewController.swift */,
-				3009377122B005D700394C3C /* Main.storyboard */,
+				3009378422B006EE00394C3C /* Controller */,
+				3009378322B006E900394C3C /* View */,
+				3009378222B006DC00394C3C /* Model */,
 				3009377722B005D800394C3C /* Assets.xcassets */,
 				3009377922B005D800394C3C /* LaunchScreen.storyboard */,
 				3009377C22B005D800394C3C /* Info.plist */,
 				3009377422B005D700394C3C /* Userdao_Tset.xcdatamodeld */,
 			);
 			path = "Userdao Tset";
+			sourceTree = "<group>";
+		};
+		3009378222B006DC00394C3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3009378522B0070B00394C3C /* UserDao.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3009378322B006E900394C3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3009377122B005D700394C3C /* Main.storyboard */,
+				3009378722B0072200394C3C /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3009378422B006EE00394C3C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3009376D22B005D700394C3C /* AppDelegate.swift */,
+				3009376F22B005D700394C3C /* ViewController.swift */,
+				3009378922B00C0000394C3C /* LoginViewController.swift */,
+				3009378B22B00E2D00394C3C /* RegisterViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +163,7 @@
 			files = (
 				3009377B22B005D800394C3C /* LaunchScreen.storyboard in Resources */,
 				3009377822B005D800394C3C /* Assets.xcassets in Resources */,
+				3009378822B0072200394C3C /* Login.storyboard in Resources */,
 				3009377322B005D700394C3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +178,9 @@
 				3009377622B005D700394C3C /* Userdao_Tset.xcdatamodeld in Sources */,
 				3009377022B005D700394C3C /* ViewController.swift in Sources */,
 				3009376E22B005D700394C3C /* AppDelegate.swift in Sources */,
+				3009378C22B00E2D00394C3C /* RegisterViewController.swift in Sources */,
+				3009378A22B00C0000394C3C /* LoginViewController.swift in Sources */,
+				3009378622B0070B00394C3C /* UserDao.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

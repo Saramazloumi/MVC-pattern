@@ -9,14 +9,30 @@
 import UIKit
 import CoreData
 
+var userDao : UserDao?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var userData = UserDefaults.standard
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+          userDao = UserDao(delegate: self)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let storyBoard = UIStoryboard.init(name: "Login", bundle: nil)
+        let registerViewController = storyBoard.instantiateViewController(withIdentifier: "registration")
+        
+        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "login")
+        if userData.bool(forKey: "tapped"){
+            window?.rootViewController = loginViewController
+        }else{
+            window?.rootViewController = registerViewController
+        }
+        window?.makeKeyAndVisible()
         return true
     }
 
