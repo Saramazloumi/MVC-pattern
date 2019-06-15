@@ -26,9 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyBoard = UIStoryboard.init(name: "Login", bundle: nil)
         let registerViewController = storyBoard.instantiateViewController(withIdentifier: "registration")
         
-        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "login")
+        let storyBoard2 = UIStoryboard(name: "Main", bundle: nil)
+        
+        let viewController = storyBoard2.instantiateViewController(withIdentifier: "main")
         if userData.bool(forKey: "tapped"){
-            window?.rootViewController = loginViewController
+            window?.rootViewController = viewController
         }else{
             window?.rootViewController = registerViewController
         }

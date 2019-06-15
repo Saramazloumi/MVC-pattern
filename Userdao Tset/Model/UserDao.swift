@@ -39,23 +39,23 @@ class UserDao {
     }
     
     
-    func saveUser(user: User) -> Bool {
+    func saveUser(userForm: UserForm) -> Bool {
         
-        if let existUser = getUserByUsername(username: user.username!) {
+        if let existUser = getUserByUsername(username: userForm.username!) {
             print("\(existUser.username!) already exist!")
             return false
         }else {
             let context = getManageContext()!
             let saveUser = User(context: context)
-            saveUser.firstname = user.firstname
-            saveUser.lastname = user.lastname
-            saveUser.username = user.username
-            saveUser.password = user.password
+            saveUser.firstname = userForm.firstname
+            saveUser.lastname = userForm.lastname
+            saveUser.username = userForm.username
+            saveUser.password = userForm.password
             do{
                 try context.save()
                 return true
             }catch{
-                print("Error in saving \(user.username!)")
+                print("Error in saving \(userForm.username!)")
                 return false
             }
         }

@@ -22,22 +22,22 @@ class RegisterViewController: UIViewController {
    
     @IBAction func registerBtnTapped(_ sender: UIButton) {
         if validateFields() {
-        let user = User(context: (userDao?.getManageContext()!)!)
-        user.firstname = firstnameTextField.text
-        user.lastname = lastnameTextField.text
-        user.username = usernameTextField.text
-        user.password = passwordTextField.text
+       var userForm = UserForm()
+            userForm.firstname = firstnameTextField.text
+            userForm.lastname = lastnameTextField.text
+            userForm.username = usernameTextField.text
+            userForm.password = passwordTextField.text
         
-        if (userDao?.saveUser(user: user)) != nil {
+            if ((userDao?.saveUser(userForm: userForm))!) {
             username = usernameTextField.text!
             password = passwordTextField.text!
-            
-            let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-            let loginViewController = storyBoard.instantiateViewController(withIdentifier: "login")
-            present(loginViewController, animated: true, completion: nil)
-            statusLabel.text = "\(user.username!) successfully registered "
+                
+                let storyBorad = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = storyBorad.instantiateViewController(withIdentifier: "main")
+                present(viewController, animated: true, completion: nil)
+                statusLabel.text = "\(userForm.username!) successfully registered "
         }else{
-            statusLabel.text = "\(user.username!) is exist!"
+            statusLabel.text = "\(userForm.username!) is exist!"
           }
         }
         userData.set(true, forKey: "tapped")
